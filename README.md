@@ -1,3 +1,10 @@
 # Ecommerce-Site-AD-Cartz-
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Abhrajit-debnath/Ecommerce-Site-AD-Cartz-)
+# Overview 
+- A Simple ecommerce website with some simple features made with htm,css,js
+
+# Features
+- API Calling.
+- Product Lisitings.
+- Cart Functionalities.
+- Search and filter features.
