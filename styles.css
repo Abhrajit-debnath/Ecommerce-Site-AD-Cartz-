@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-color: #000;
+  --primary-font: 'poppins';
+  --secondary-font: 'lato';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(10, 10, 10);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header h2 {
+  color: white;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.8vw;
+}
+header {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li {
+  list-style-type: none;
+  color: white;
+  font-family: var(--primary-font);
+  font-size: 1.1vw;
+}
+header nav ul li:hover {
+  cursor: pointer;
+}
+
+header .features {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  color: rgb(222, 222, 222);
+}
+
+.cart span,
+.search span {
+  font-size: 30px;
+}
+
+.cart span:hover,
+.search span:hover {
+  cursor: pointer;
+}
+/* .search {
+  position: relative;
+} */
+
+.search-box {
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  animation: slide-search 0.5s ease-in-out 1 forwards;
+  display: none;
+}
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+/* .cart {
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+} */
+
+@keyframes slide-search {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.banner img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+
+/* Product Starts */
+
+.products {
+  margin: 80px 0;
+}
+.products h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.2vw;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+.products .product-list .product {
+  position: relative;
+  width: 25%;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.56);
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.products .product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.products .product-list .product img {
+  /* clip-path: circle(26% at 45% 45%); */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 16/9;
+}
+
+.products .product-list .product h3,
+.products .product-list .product p {
+  width: 100%;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1.1vw;
+  font-weight: 400;
+  padding-top: 20px;
+  line-height: 28px;
+}
+
+.products .product-list .product span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+}
+.counter {
+  text-align: center;
+  display: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  right: -10px;
+  font-family: var(--primary-font);
+  top: -5px;
+  user-select: none;
+}
+
+.products .product-list .erroe-msg {
+  color: white;
+  font-size: 2vw;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
+/* Footer Starts */
+
+.footer {
+  padding: 30px 0%;
+  text-align: center;
+}
+.footer h2 {
+  color: White;
+  font-size: 2.2vw;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+.footer p {
+  color: rgb(151, 151, 151);
+  font-family: var(--primary-font);
+  padding-top: 20px;
+}
+.sidebar {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  z-index: 1;
+  top: 100px;
+  padding: 20px 20px;
+  height: 80%;
+  overflow-y: auto;
+  border-radius: 20px;
+  animation: slide 0.7s alternate;
+  display: none;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 100px;
+  }
+}
+.sidebar ::-webkit-scrollbar {
+  background-color: transparent;
+}
+.product-list p {
+  width: 100%;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 2vw;
+  font-weight: 400;
+  padding-top: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.sidebar .product-cart .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar .product-cart .product img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.sidebar .product-cart .product p,
+.sidebar .product-cart .product h3 {
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+.sidebar .product-cart {
+  position: relative;
+}
+.sidebar .product-cart h2 {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sidebar .product-cart h4,
+.sidebar .product-cart h2 {
+  text-align: center;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1.4vw;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+
+.sidebar .product-cart .amount-tag {
+  text-align: center;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1.4vw;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(49, 49, 49);
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 200px;
+}
